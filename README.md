@@ -17,7 +17,7 @@ The available captures establish DNS, TCP, HTTP and TLS activity, including a sh
 | Area | Observation | Limitation |
 | --- | --- | --- |
 | SMS | Santander branding and urgency | Social-engineering indicators, not proof of compromise |
-| DNS | `santander-pt.urgencia.pt` resolved to `198.52.247.66` during testing | Historical observation; DNS can change |
+| DNS | `santander-pt[.]urgencia[.]pt` resolved to `198[.]52[.]247[.]66` during testing | Historical observation; DNS can change |
 | Browser | Firefox “Deceptive site ahead” warning | Browser reputation finding |
 | HTTPS | `403 Forbidden` displayed | No working phishing form observed |
 | HTTP | Redirect behaviour toward the HTTPS domain | Purpose of routing not confirmed |
@@ -37,7 +37,7 @@ The diagram documents the Windows 11 host, Windows 10 Flare_VM, OPNsense LAN/WAN
 | Phishing_1 | 341 | 32 |
 | Phishing_2 | 3,797 | 118 |
 
-**Analysis VM:** `172.20.50.114` · **Observed remote IP:** `198.52.247.66` · **Capture interface:** OPNsense LAN `em1`.
+**Analysis VM:** `172.20.50.114` · **Observed remote IP:** `198[.]52[.]247[.]66` · **Capture interface:** OPNsense LAN `em1`.
 
 ## Repository navigation
 
