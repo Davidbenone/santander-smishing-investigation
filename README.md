@@ -12,6 +12,18 @@ The investigation combined controlled browser checks, DNS queries and network pa
 
 The available captures establish DNS, TCP, HTTP and TLS activity, including a short HTTP-to-HTTPS redirect. They **do not** establish successful credential theft.
 
+## Final assessment
+
+**Classification: Suspected smishing / Santander Portugal impersonation — high confidence.**
+
+The collected evidence strongly supports classifying the received SMS as a smishing attempt impersonating Santander Portugal. It invoked an allegedly pending **€1,371.00 domestic transfer** to create urgency and directed the recipient to a deceptive Santander-themed domain, `santander-pt[.]urgencia[.]pt`, rather than an official bank domain.
+
+This assessment is supported by the original SMS, the Firefox **“Deceptive site ahead”** security warning, DNS and network observations from the isolated lab, and the Cloudflare access block observed in ANY.RUN.
+
+**Important limits:** No credential-collection form was observed in the tested sessions. The available evidence does **not** establish that credentials were entered, stolen, or exfiltrated. The observed HTTP traffic did not show a credential-submission POST, but encrypted HTTPS traffic prevents ruling out all possible data exchange. The Cloudflare block does not establish why access was denied or whether the site was taken down.
+
+**Conclusion:** The message is assessed as a **high-confidence smishing attempt**, while **successful credential harvesting and data exfiltration remain unconfirmed**. This distinction reflects the evidence available, not a lack of investigative value.
+
 ## Key findings
 
 | Area | Observation | Limitation |
