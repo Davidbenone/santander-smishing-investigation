@@ -6,7 +6,7 @@
 
 ## What the screenshot shows
 
-The browser address bar displays `santander-pt.urgencia.pt`. The page title refers to Cloudflare and the content prominently states:
+The browser address bar displays `santander-pt[.]urgencia[.]pt`. The page title refers to Cloudflare and the content prominently states:
 
 > Sorry, you have been blocked
 
