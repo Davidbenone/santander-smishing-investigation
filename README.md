@@ -55,3 +55,9 @@ The suspicious SMS, deceptive-site browser warning and observed infrastructure b
 This repository is for defensive research and education. No raw PCAPs or unredacted private evidence are published. Do not visit the suspicious URL outside a controlled environment or submit personal or banking information.
 
 Santander Portugal is referenced solely as the impersonated brand. This project is not affiliated with Santander.
+
+## ANY.RUN screenshot
+
+![ANY.RUN session showing Cloudflare access block](evidence/Any.run.jpg)
+
+The captured browser session showed a Cloudflare access block; this does not confirm credential harvesting. See [ANY.RUN analysis](evidence/anyrun-analysis.md).
