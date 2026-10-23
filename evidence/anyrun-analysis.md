@@ -18,7 +18,9 @@ The captured session was **blocked from accessing the requested page**. This is 
 
 ## Screenshot
 
-The original screenshot is held for publication as `evidence/anyrun-cloudflare-block.jpg`. The textual observation is published independently of the image so that no unavailable screenshot is represented as already uploaded.
+![ANY.RUN browser session showing the Cloudflare block](Any.run.jpg)
+
+[View the original screenshot](Any.run.jpg).
 
 ## Limits
 
