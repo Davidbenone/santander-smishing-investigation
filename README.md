@@ -1,2 +1,51 @@
-# santander-smishing-investigation
-Santander Portugal smishing investigation — DNS, HTTP, TLS and network forensics
+# Santander Portugal — Smishing Investigation
+
+**Defensive cybersecurity case study** | SMS phishing triage · DNS · HTTP/TLS · Network forensics
+
+> **Assessment:** Suspected phishing destination. A credential-harvesting page and credential exfiltration were **not confirmed**.
+
+## Executive summary
+
+This project documents the investigation of a suspicious SMS impersonating Santander Portugal and linking to `santander-pt[.]urgencia[.]pt`.
+
+The investigation combined controlled browser checks, DNS queries and network packet capture from an isolated Windows 10 analysis VM behind OPNsense. Firefox displayed a **“Deceptive site ahead”** warning. When tested, the destination ultimately displayed **403 Forbidden**, rather than a visible banking login form.
+
+The available captures establish DNS, TCP, HTTP and TLS activity, including a short HTTP-to-HTTPS redirect. They **do not** establish successful credential theft.
+
+## Key findings
+
+| Area | Observation | Limitation |
+| --- | --- | --- |
+| SMS | Santander branding and urgency | Social-engineering indicators, not proof of compromise |
+| DNS | `santander-pt.urgencia.pt` resolved to `198.52.247.66` during testing | Historical observation; DNS can change |
+| Browser | Firefox “Deceptive site ahead” warning | Browser reputation finding |
+| HTTPS | `403 Forbidden` displayed | No working phishing form observed |
+| HTTP | Redirect behaviour toward the HTTPS domain | Purpose of routing not confirmed |
+| TLS | Handshake activity; curl certificate trust error | Full certificate chain not conclusively validated |
+| Exfiltration | No credential submission found in visible HTTP traffic | HTTPS payloads were encrypted |
+
+## Packet capture summary
+
+| Capture | Total packets | TCP packets exchanged between analysis VM and observed remote IP |
+| --- | ---: | ---: |
+| Phishing_1 | 341 | 32 |
+| Phishing_2 | 3,797 | 118 |
+
+**Analysis VM:** `172.20.50.114` · **Observed remote IP:** `198.52.247.66` · **Capture interface:** OPNsense LAN `em1`.
+
+## Repository navigation
+
+- [Methodology and lab architecture](methodology.md)
+- [Network analysis](network-analysis/README.md)
+- [Indicators of compromise / investigation](iocs/indicators.md)
+- [Evidence handling and publication policy](evidence/README.md)
+
+## Conclusion
+
+The suspicious SMS, deceptive-site browser warning and observed infrastructure behaviour justify treating the destination as **high-risk and suspected phishing-related**. The investigation did **not** recover a functioning credential-entry page or demonstrate credential exfiltration.
+
+## Responsible disclosure and safety
+
+This repository is for defensive research and education. No raw PCAPs or unredacted private evidence are published. Do not visit the suspicious URL outside a controlled environment or submit personal or banking information.
+
+Santander Portugal is referenced solely as the impersonated brand. This project is not affiliated with Santander.
