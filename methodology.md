@@ -33,6 +33,8 @@ OPNsense was configured to restrict traffic from the analysis LAN toward private
 
 ## Suggested Wireshark display filters
 
+The following filters use the **original IP address** because Wireshark requires literal values. These are executable analysis filters, not clickable links.
+
 ```text
 ip.addr == 198.52.247.66
 dns.qry.name contains "santander"
