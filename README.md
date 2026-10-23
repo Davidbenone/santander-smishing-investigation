@@ -24,6 +24,12 @@ The available captures establish DNS, TCP, HTTP and TLS activity, including a sh
 | TLS | Handshake activity; curl certificate trust error | Full certificate chain not conclusively validated |
 | Exfiltration | No credential submission found in visible HTTP traffic | HTTPS payloads were encrypted |
 
+## Laboratory architecture
+
+![Isolated lab topology](evidence/lab-topology.svg)
+
+The diagram documents the Windows 11 host, Windows 10 Flare_VM, OPNsense LAN/WAN/OPT1 interfaces and outbound NAT path.
+
 ## Packet capture summary
 
 | Capture | Total packets | TCP packets exchanged between analysis VM and observed remote IP |
