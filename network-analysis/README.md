@@ -7,11 +7,11 @@
 | Total packets | 341 | 3,797 |
 | TCP packets exchanged with observed destination | 32 | 118 |
 
-The analysis VM was `172.20.50.114`; the remote IP observed during testing was `198.52.247.66`.
+The analysis VM was `172.20.50.114`; the remote IP observed during testing was `198[.]52[.]247[.]66`.
 
 ## DNS
 
-The captures show queries for `santander-pt.urgencia.pt` to resolver `1.1.1.1`. The first capture also contained a query for `santander-pt.urgencia.pt.internal` that returned NXDOMAIN. A local DNS search suffix may explain this; it is not independently a malicious indicator.
+The captures show queries for `santander-pt[.]urgencia[.]pt` to resolver `1.1.1.1`. The first capture also contained a query for `santander-pt[.]urgencia[.]pt.internal` that returned NXDOMAIN. A local DNS search suffix may explain this; it is not independently a malicious indicator.
 
 ## TCP and TLS
 
