@@ -56,6 +56,12 @@ This repository is for defensive research and education. No raw PCAPs or unredac
 
 Santander Portugal is referenced solely as the impersonated brand. This project is not affiliated with Santander.
 
+## Original smishing SMS
+
+![Original suspicious SMS impersonating Santander Portugal](evidence/phishing-sms.jpg)
+
+This user-received SMS initiated the investigation. It claimed that a €1,371.00 domestic transfer was pending and urged the recipient to visit a Santander-themed domain. The message is treated as **suspected impersonation**, not a genuine bank notification. The screenshot preserves the original evidence; suspicious destinations are defanged in the written analysis.
+
 ## ANY.RUN screenshot
 
 ![ANY.RUN session showing Cloudflare access block](evidence/Any.run.jpg)
